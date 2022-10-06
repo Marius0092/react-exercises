@@ -1,7 +1,12 @@
-import React from "react"
+import React, { Fragment } from "react"
 
 export class Hello extends React.Component {
     render() {
-        return <h1>Hello, World!</h1>
+        return (
+            <Fragment>
+                <h1>Hello, World!</h1>
+                <p>What a beatiful day!</p>
+            </Fragment>
+        )        
     }
 }
