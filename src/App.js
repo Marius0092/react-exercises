@@ -1,17 +1,11 @@
 import React from "react";
-import { Hello } from "./helloWorld";
-import { Welcome } from "./Welcome";
-import { ClickCounter } from "./ClickCounter";
-import { ClickTracker } from "./ClickTracker";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-                <Hello />
-                <Welcome name ={<strong>Johnny</strong>} age ={30} />
-                <ClickCounter incrementAmount = {20} initialValue = {0} incrementInterval = {1000} />
-                <ClickTracker />
+                <InteractiveWelcome />
             </div>
         )
     }
