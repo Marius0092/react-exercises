@@ -6,14 +6,6 @@ export class ClickCounter extends React.Component {
         count: this.props.initialValue,
     }
 
-    // componentDidMount() {                
-    //     setInterval(() => {
-    //         this.setState((state) => {
-    //             return { count: state.count + this.props.increment }
-    //         })
-    //     }, this.props.interval)
-    // }
-
     counterIncrement = () => {
         this.setState(state => {
             return {
