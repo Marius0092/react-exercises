@@ -19,10 +19,20 @@ export class Login extends React.Component {
             })
     }
 
-        
-        onLogin = () => {
-            console.log('delle info sono state inviate: ' + this.state.username, this.state.password, this.state.remember)
-        };
+
+    onLogin = () => {
+        console.log('delle info sono state inviate: ' + this.state.username, this.state.password, this.state.remember)
+    };
+
+    handleReset = () => {
+        this.setState(
+            {
+                username: '',
+                password: '',
+                remember: false
+            }
+        )
+    }
 
     render() {
         return (
@@ -31,7 +41,8 @@ export class Login extends React.Component {
                 <input name='password' value={this.state.password} type='password' onChange={this.handleInputChange} />
                 <input name='remember' type="checkbox" checked={this.state.remember} onChange={this.handleInputChange} />
                 {/* <button type='submit' disabled={!this.state.username || !this.state.password} onClick={this.handleLogin}>Login</button> */}
-                <button name="loginButton" type="submit" onClick={()=>this.onLogin()} disabled={this.state.username==="" && this.state.password===""}>Login</button>
+                <button name="loginButton" type="submit" onClick={() => this.onLogin()} disabled={this.state.username === "" && this.state.password === ""}>Login</button>
+                <button onClick={this.handleReset}>Reset</button>
             </div>
         )
     }
