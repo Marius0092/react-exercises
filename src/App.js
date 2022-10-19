@@ -2,6 +2,7 @@ import React from "react";
 import {Login} from "./Login"
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
     
@@ -14,6 +15,7 @@ export class App extends React.Component {
                 <Login login={(data)=>onLogin(data)}/>
                 <UncontrolledLogin />
                 <TodoList />
+                <Welcome />
             </div>
         )
     }
