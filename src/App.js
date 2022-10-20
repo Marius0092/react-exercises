@@ -15,14 +15,23 @@ export class App extends React.Component {
             <div>
                 <Login login={(data) => onLogin(data)} />
                 <UncontrolledLogin />
-                <TodoList />
+                <TodoList
+                    render={(items, handleRemove) => {
+                        return (
+                            <ul>
+                                {items.map((item, index) => <li key={index}>{item} <button type="button" onClick={() => { handleRemove(item) }}>Remove</button></li>)}
+                            </ul>
+                        )
+                    }}
+                >
+                </TodoList>
                 <Welcome />
                 <Container title="Titolo">
-                   <p>
-                    Prova
-                   </p>
+                    <p>
+                        Prova
+                    </p>
                 </Container>
-            </div>
+            </div >
         )
     }
 }
