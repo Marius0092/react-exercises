@@ -17,7 +17,7 @@ export class App extends React.Component {
                 <UncontrolledLogin />
                 <TodoList />
                 <Welcome />
-                <Container>
+                <Container title="Titolo">
                    <p>
                     Prova
                    </p>
