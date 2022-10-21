@@ -1,37 +1,25 @@
 import React from "react";
-import { Container } from "./Container";
-import { Login } from "./Login"
-import { TodoList } from "./TodoList";
-import { UncontrolledLogin } from "./UncontrolledLogin";
-import { Welcome } from "./Welcome";
+import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
+import { useState } from "react";
 
-export class App extends React.Component {
+export function App() {
 
-    render() {
-        function onLogin(data) {
-            console.log('delle info sono state inviate: ' + data.username, data.password, data.remember)
-        }
-        return (
-            <div>
-                <Login login={(data) => onLogin(data)} />
-                <UncontrolledLogin />
-                <TodoList
-                    render={(items, handleRemove) => {
-                        return (
-                            <ul>
-                                {items.map((item, index) => <li key={index}>{item} <button type="button" onClick={() => { handleRemove(item) }}>Remove</button></li>)}
-                            </ul>
-                        )
-                    }}
-                >
-                </TodoList>
-                <Welcome />
-                <Container title="Titolo">
-                    <p>
-                        Prova
-                    </p>
-                </Container>
-            </div >
-        )
+    const [language, setLanguage] = useState("en");
+
+    function handleChangeLanguage(event) {
+        setLanguage(event.target.value);
     }
+
+    return (
+        <div>
+            <select value={language} onChange={handleChangeLanguage}>
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+            </select>
+            <LanguageContext.Provider value={language}>
+                <DisplayLanguage />
+            </LanguageContext.Provider>
+        </div>
+    )
 }
