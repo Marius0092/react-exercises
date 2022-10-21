@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 import { ClickCounter } from "./ClickCounter";
+import { Login } from "./Login";
 
 export function App() {
 
@@ -26,6 +27,7 @@ export function App() {
             <Welcome />
             <Sum />
             <ClickCounter />
+            <Login />
         </div>
     )
 }
