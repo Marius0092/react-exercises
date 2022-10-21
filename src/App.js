@@ -4,6 +4,7 @@ import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
+import { ClickCounter } from "./ClickCounter";
 
 export function App() {
 
@@ -24,6 +25,7 @@ export function App() {
             </LanguageContext.Provider>
             <Welcome />
             <Sum />
+            <ClickCounter />
         </div>
     )
 }
