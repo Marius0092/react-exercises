@@ -3,6 +3,7 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { Welcome } from "./Welcome";
+import { Sum } from "./Sum";
 
 export function App() {
 
@@ -22,6 +23,7 @@ export function App() {
                 <DisplayLanguage />
             </LanguageContext.Provider>
             <Welcome />
+            <Sum numbers= {[1,2,7]} />
         </div>
     )
 }
