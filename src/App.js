@@ -23,7 +23,7 @@ export function App() {
                 <DisplayLanguage />
             </LanguageContext.Provider>
             <Welcome />
-            <Sum numbers= {[1,2,7]} />
+            <Sum />
         </div>
     )
 }
