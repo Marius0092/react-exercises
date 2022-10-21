@@ -1,13 +1,11 @@
 import React from "react";
 
-export class Welcome extends React.Component {
-    render() {
-        return (
-            <div>
-                <p className='index'>Hello, {this.props.name}</p>
-            </div>
-        )
-    }
+export function Welcome(props) {
+    return (
+        <div>
+            <p className='index'>Hello, {props.name}</p>
+        </div>
+    )
 }
 
 Welcome.defaultProps = {

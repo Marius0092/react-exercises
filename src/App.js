@@ -2,6 +2,7 @@ import React from "react";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
+import { Welcome } from "./Welcome";
 
 export function App() {
 
@@ -20,6 +21,7 @@ export function App() {
             <LanguageContext.Provider value={language}>
                 <DisplayLanguage />
             </LanguageContext.Provider>
+            <Welcome />
         </div>
     )
 }
