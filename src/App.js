@@ -26,7 +26,9 @@ export function App() {
             </LanguageContext.Provider>
             <Welcome />
             <Sum />
-            <ClickCounter />
+            <ClickCounter onCounterChange={(counter) => {
+                return console.log(`current value is ${counter}`)
+            }} />
             <Login />
         </div>
     )
