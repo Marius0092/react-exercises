@@ -6,6 +6,7 @@ import { Welcome } from "./Welcome";
 import { Sum } from "./Sum";
 import { ClickCounter } from "./ClickCounter";
 import { Login } from "./Login";
+import { Counter } from "./Counter";
 
 export function App() {
 
@@ -30,6 +31,7 @@ export function App() {
                 return console.log(`current value is ${counter}`)
             }} />
             <Login />
+            <Counter />
         </div>
     )
 }
