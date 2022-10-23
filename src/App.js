@@ -10,6 +10,7 @@ import { Counter } from "./Counter";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { HookCounter } from "./UseCounter";
+import { HookForm } from "./HookForm";
 
 export function App() {
 
@@ -38,6 +39,7 @@ export function App() {
             <GithubUser username="Marius0092" />
             <GithubUserList />
             <HookCounter />
+            <HookForm />
         </div>
     )
 }
