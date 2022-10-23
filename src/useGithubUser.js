@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useGithubUser({ username }) {
+function useGithubUser(username) {
     const [data, setData] = useState(null)
 
     useEffect(() => {
@@ -15,6 +15,16 @@ function useGithubUser({ username }) {
     }, [username])
 
     return {
-        fetchedData: data
+        dataFetched: data
     }
+}
+
+export function FetchGithub({ username }) {
+    const { dataFetched } = useGithubUser(username)
+
+    return (
+        <div>
+            {dataFetched && <h1>{dataFetched.login}</h1>}
+        </div>
+    )
 }
