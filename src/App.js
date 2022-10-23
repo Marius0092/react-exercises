@@ -8,6 +8,7 @@ import { ClickCounter } from "./ClickCounter";
 import { Login } from "./Login";
 import { Counter } from "./Counter";
 import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export function App() {
 
@@ -34,6 +35,7 @@ export function App() {
             <Login />
             <Counter />
             <GithubUser username="Marius0092" />
+            <GithubUserList />
         </div>
     )
 }
