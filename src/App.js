@@ -12,6 +12,7 @@ import { GithubUserList } from "./GithubUserList";
 import { HookCounter } from "./UseCounter";
 import { HookForm } from "./HookForm";
 import { FetchGithub } from "./useGithubUser";
+import { CarDetails } from "./CarDetails";
 
 export function App() {
 
@@ -42,6 +43,7 @@ export function App() {
             <HookCounter />
             <HookForm />
             <FetchGithub username="Marius0092" />
+            <CarDetails initialData={{model: "Mercedes", year: "2022", color: "Gray"}} />
         </div>
     )
 }
