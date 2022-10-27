@@ -2,17 +2,18 @@ import React from "react";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
-import { Welcome } from "./Welcome";
-import { Sum } from "./Sum";
-import { ClickCounter } from "./ClickCounter";
-import { Login } from "./Login";
-import { Counter } from "./Counter";
-import { GithubUser } from "./GithubUser";
-import { GithubUserList } from "./GithubUserList";
-import { HookCounter } from "./UseCounter";
-import { HookForm } from "./HookForm";
-import { FetchGithub } from "./useGithubUser";
-import { CarDetails } from "./CarDetails";
+// import { Welcome } from "./Welcome";
+// import { Sum } from "./Sum";
+// import { ClickCounter } from "./ClickCounter";
+// import { Login } from "./Login";
+// import { Counter } from "./Counter";
+// import { GithubUser } from "./GithubUser";
+// import { GithubUserList } from "./GithubUserList";
+// import { HookCounter } from "./UseCounter";
+// import { HookForm } from "./HookForm";
+// import { FetchGithub } from "./useGithubUser";
+// import { CarDetails } from "./CarDetails";
+import { FilteredList } from "./FilteredList";
 
 export function App() {
 
@@ -31,7 +32,7 @@ export function App() {
             <LanguageContext.Provider value={language}>
                 <DisplayLanguage />
             </LanguageContext.Provider>
-            <Welcome />
+            {/* <Welcome />
             <Sum />
             <ClickCounter onCounterChange={(counter) => {
                 return console.log(`current value is ${counter}`)
@@ -43,7 +44,8 @@ export function App() {
             <HookCounter />
             <HookForm />
             <FetchGithub username="Marius0092" />
-            <CarDetails initialData={{model: "Mercedes", year: "2022", color: "Gray"}} />
+            <CarDetails initialData={{model: "Mercedes", year: "2022", color: "Gray"}} /> */}
+            <FilteredList />
         </div>
     )
 }
