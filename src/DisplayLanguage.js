@@ -1,14 +1,19 @@
-// import { useContext } from "react";
-import { LanguageContext } from "./LanguageContext";
+import { useContext } from "react"
+import { LanguageContext } from "./LanguageContext"
+
+const text = {
+    en: {
+        msg: "English version"
+    },
+    it: {
+        msg: "Versione italiana"
+    }
+}
 
 export function DisplayLanguage() {
-    // const language = useContext(LanguageContext)
-    // return <h3>Current Language: {language}</h3>
-    return(
-        <LanguageContext.Consumer>
-            {language =>{
-                return <h1>Current language: {language}</h1>
-            }}
-        </LanguageContext.Consumer>
+    const language = useContext(LanguageContext)
+    return (
+        <h1>{text[language].msg}</h1>
+
     )
 }
