@@ -20,3 +20,5 @@ export function GithubUser({ username }) {
         {data && <h1>{data.login}</h1>}
     </div>
 }
+
+export default GithubUser;
