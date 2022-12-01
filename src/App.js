@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { Counter } from "./Counter";
+import { GithubUserList } from "./GithubUserList";
 import { ShowGithubUser } from "./ShowGithubUser";
 import { Welcome } from "./Welcome";
 
@@ -12,8 +13,11 @@ export function App() {
             <Routes>
                 <Route path="/" element={<Welcome name="Mario" />} />
                 <Route path="/counter" element={<Counter />} />
-                <Route path="users/:username" element={<ShowGithubUser />} />
+                {/* <Route path="users/:username" element={<ShowGithubUser />} /> */}
                 <Route path="/82375823y" element={<p>Not found</p>} />
+                <Route path="/users" element={<GithubUserList />}>
+                    <Route path=":username" element={<ShowGithubUser />} />
+                </Route>
             </Routes>
 
             <div>
